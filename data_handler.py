@@ -33,7 +33,7 @@ def preprocess_one_digit(path):
      cropped_image = cropped_image[y-num : y+h+num,  x-num : x+w+num]
 
      kernel = np.ones((3, 3))
-     dilated_image = cv.dilate(cropped_image, kernel, iterations = 15)
+     dilated_image = cv.dilate(cropped_image, kernel, iterations = 10)
 
      resized_image = cv.resize(dilated_image, (28, 28))
 
